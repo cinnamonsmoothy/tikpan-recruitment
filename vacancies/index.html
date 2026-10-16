@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore current vacancies from Tikpan Recruitment Group.">
+  <title>Vacancies | Tikpan Recruitment Group</title>
+  <link rel="preconnect" href="https://recruitment-jobs-api.almondghost6.chatgpt.site" crossorigin>
+  <link rel="dns-prefetch" href="//recruitment-jobs-api.almondghost6.chatgpt.site">
+  <script src="./jobs-runtime-config.js?v=5"></script>
+  <script src="../assets/js/jobs-source.js?v=6"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/pages.css?v=19">
+  <link rel="stylesheet" href="../assets/css/jobs.css?v=4">
+  <link rel="stylesheet" href="../assets/css/scroll-effects.css?v=20" data-scroll-effects-styles>
+  <link rel="stylesheet" href="../assets/css/site-layout-v24.css" data-site-layout>
+  <link rel="stylesheet" href="../assets/css/site-header.css?v=21" data-site-header-styles>
+  <script src="../assets/js/site-header.js?v=22" defer></script>
+</head>
+<body>
+  <header data-site-header data-root="../"></header>
+  <main>
+    <section class="page-hero jobs-hero">
+      <div class="container">
+        <div class="label">Vacancies</div>
+        <h1>Find your next opportunity.</h1>
+        <p>Explore current roles across the specialist industries we serve.</p>
+      </div>
+    </section>
+    <section class="section jobs-section" aria-labelledby="jobs-heading">
+      <div class="container">
+        <div class="jobs-heading">
+          <div>
+            <span class="jobs-kicker">Open positions</span>
+            <h2 id="jobs-heading">Current vacancies</h2>
+          </div>
+          <p id="jobs-count" class="jobs-count" aria-live="polite">Loading vacancies…</p>
+        </div>
+        <form class="job-filters" id="job-filters" role="search">
+          <label class="job-search"><span>Search roles</span><input id="job-search" type="search" placeholder="Job title, sector or location" autocomplete="off"></label>
+          <label><span>Sector</span><select id="job-sector"><option value="">All sectors</option></select></label>
+          <label><span>Location</span><select id="job-location"><option value="">All locations</option></select></label>
+          <label><span>Job type</span><select id="job-type"><option value="">All job types</option></select></label>
+        </form>
+        <div id="job-list" class="job-list" aria-live="polite" aria-busy="true"></div>
+        <div id="jobs-empty" class="jobs-empty" hidden>
+          <h3>No vacancies found.</h3>
+          <p>Try changing the filters, or email us to register your interest for future roles.</p>
+          <a class="button" href="mailto:YOUR_EMAIL_HERE?subject=Candidate%20CV%20submission">Email your CV <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" data-site-footer data-root="../"></footer>
+  <script src="../assets/js/site-footer.js?v=19"></script>
+  <script src="../assets/js/jobs-list.js?v=7"></script>
+  <script src="../assets/js/scroll-effects.js?v=21"></script>
+</body>
+</html>

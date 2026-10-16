@@ -1,0 +1,11 @@
+{
+  "name": "tikpan-recruitment-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:pages": "node scripts/build-pages.mjs",
+    "jobs:sync": "node scripts/sync-jobs.mjs",
+    "jobs:sync:local": "node scripts/sync-jobs-local.mjs",
+    "jobs:check": "node scripts/sync-jobs.mjs --sample --dry-run"
+  }
+}

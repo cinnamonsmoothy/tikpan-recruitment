@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Sample Marine Engineer",
+    "sector": "Marine, Offshore & Fishing",
+    "location": "Aberdeen",
+    "workplace": "On-site",
+    "employment_type": "Full-time",
+    "hours": "40 hours per week",
+    "salary": "£42,000–£50,000 DOE",
+    "posted_date": "2026-10-15",
+    "closing_date": "2026-11-30",
+    "job details": "A sample vacancy used to validate the reusable jobs-board template.|Maintain vessel machinery and complete safety inspections.|Relevant marine engineering experience is required.|Competitive salary, training support and pension contribution.",
+    "email": "jobs@example.com",
+    "phone": "07456 234 942",
+    "job listed": "TRUE"
+  },
+  {
+    "title": "",
+    "location": "",
+    "posted_date": "date to confirm",
+    "closing_date": "",
+    "job details": "",
+    "job listed": "TRUE"
+  }
+]

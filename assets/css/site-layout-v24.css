@@ -1,0 +1,92 @@
+:root {
+  --site-content-width: 1180px;
+  --site-page-gutter: 48px;
+}
+
+html {
+  width: 100%;
+  overflow-x: clip;
+  scrollbar-gutter: stable;
+}
+
+body,
+main {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  overflow-x: clip;
+}
+
+.container,
+.site-container,
+.site-shell,
+.hero-inner {
+  width: 1180px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page-display {
+  max-width: 1150px !important;
+  font-family: "Plus Jakarta Sans", Inter, sans-serif !important;
+  font-size: clamp(76px, 8.5vw, 128px) !important;
+  font-weight: 600 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -3px !important;
+}
+
+.page-hero h1 {
+  width: 100%;
+  max-width: 1150px !important;
+}
+
+.page-hero p {
+  width: 100%;
+  max-width: 760px !important;
+}
+
+.placeholder-card {
+  width: 100%;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.section-head h2,
+.split h2,
+.contact-intro h2,
+.cta h2 {
+  font-weight: 600;
+}
+
+@media (max-width: 1228px) {
+  .container,
+  .site-container,
+  .site-shell,
+  .hero-inner {
+    width: calc(100% - 48px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  :root { --site-page-gutter: 34px; }
+
+  .container,
+  .site-container,
+  .site-shell,
+  .hero-inner {
+    width: calc(100% - 34px) !important;
+  }
+
+  .hero-inner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-display {
+    font-size: clamp(53px, 15vw, 72px) !important;
+    letter-spacing: -2px !important;
+  }
+}

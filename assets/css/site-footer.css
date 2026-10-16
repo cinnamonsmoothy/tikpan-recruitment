@@ -1,0 +1,32 @@
+.footer[data-site-footer] {
+  padding: 65px 0 25px;
+  background: #03182e;
+  color: #afc1d2;
+}
+
+.footer[data-site-footer] .container { display: block; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 55px; }
+.footer-grid h4 { margin: 0 0 12px; color: #fff; font-size: 13px; }
+.footer-grid p, .footer-grid a { font-size: 12px; line-height: 2; }
+.footer-grid p { max-width: 430px; margin: 14px 0 0; }
+.footer-grid a { display: block; }
+.footer-grid a:hover { color: #d6b34f; }
+.footer-brand {
+  display: block;
+  width: 220px;
+  height: 60px;
+  background: url('../../tikpan-logo.PNG') 0 -81px / 220px 220px no-repeat;
+  filter: brightness(0) invert(1);
+}
+.copyright {
+  margin-top: 45px;
+  padding-top: 23px;
+  border-top: 1px solid rgba(255, 255, 255, .11);
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand { width: 180px; height: 50px; background-position: 0 -66px; background-size: 180px; }
+  .copyright { margin-top: 32px; }
+}

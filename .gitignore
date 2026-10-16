@@ -1,0 +1,13 @@
+# Local Google credentials must never be committed.
+/secrets/
+*service-account*.json
+*.credentials.json
+.env
+.env.*
+!.env.example
+
+# Generated/deployment-only output.
+/dist-pages/
+/jobs-api-site/
+/vacancies/jobs/
+/vacancies/jobs.json

@@ -1,0 +1,338 @@
+.sector-hero.hero::before {
+  background-image:
+    linear-gradient(90deg, rgba(4,27,52,.97) 0%, rgba(4,27,52,.84) 48%, rgba(4,27,52,.28) 100%),
+    var(--sector-hero-image, url('https://images.unsplash.com/photo-1785788682899-101daed965b6?auto=format&fit=crop&w=2000&q=88'));
+  background-position: var(--sector-hero-position, center);
+}
+
+.sector-hero .hero-inner { justify-content: center; }
+.sector-hero h1 {
+  max-width: 1120px;
+  font-size: clamp(62px, 7vw, 104px) !important;
+}
+.sector-hero p { max-width: 690px; }
+
+.sector-intro {
+  padding: 120px 0;
+  background: #fff;
+}
+
+.sector-intro-grid {
+  display: grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.sector-photo {
+  position: relative;
+  min-height: 600px;
+  border-radius: 8px 68px 8px 68px;
+  background:
+    linear-gradient(180deg, rgba(4,27,52,.02), rgba(4,27,52,.15)),
+    var(--sector-intro-image, url('https://images.unsplash.com/photo-1776661616822-ba34fe4e5638?auto=format&fit=crop&w=1300&q=88')) var(--sector-intro-position, center) / cover;
+  box-shadow: -22px 22px 0 #173d65;
+}
+
+.sector-photo::after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 150px;
+  height: 150px;
+  border-top: 2px solid #d6b34f;
+  border-right: 2px solid #d6b34f;
+  border-radius: 0 56px 0 0;
+}
+
+.sector-copy h2,
+.sector-jobs-heading h2,
+.sector-cta h2 {
+  margin: 0 0 25px;
+  color: #06264b;
+  font-size: clamp(38px, 4.7vw, 62px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.sector-copy > p {
+  margin-bottom: 18px;
+  color: #627184;
+  font-size: 16px;
+}
+
+.sector-focus {
+  padding: 0 0 120px;
+  background: #fff;
+}
+
+.sector-focus-card {
+  padding: clamp(58px, 8vw, 96px);
+  border-radius: 24px 96px 24px 96px;
+  background: #06264b;
+  box-shadow: 22px 22px 0 #9fb5ca;
+  text-align: center;
+}
+
+.sector-focus-card h2 {
+  max-width: 960px;
+  margin: 0 auto 24px;
+  color: #fff;
+  font-size: clamp(40px, 5.4vw, 70px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -2.3px;
+}
+
+.sector-focus-card p {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #cbd8e5;
+  font-size: 17px;
+}
+
+.sector-jobs {
+  padding: 120px 0;
+  background: #f5f8fb;
+}
+
+.sector-jobs-heading {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.sector-jobs-heading p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #627184;
+  font-size: 16px;
+}
+
+.sector-job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.sector-job {
+  position: relative;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border: 1px solid #dce4eb;
+  border-radius: 10px;
+  background: #06264b;
+  box-shadow: 0 12px 30px rgba(4,27,52,.1);
+}
+
+.sector-job::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 88px;
+  background-image: var(--job-image);
+  background-position: var(--job-position, center);
+  background-size: cover;
+  transition: transform .45s cubic-bezier(.22,.61,.36,1);
+}
+
+.sector-job::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 88px;
+  background: linear-gradient(180deg, rgba(4,27,52,.02), rgba(4,27,52,.24));
+  pointer-events: none;
+}
+
+.sector-job:hover::before { transform: scale(1.045); }
+
+.sector-job h3 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 88px;
+  margin: 0;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #06264b;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.sector-job:nth-child(1) { --job-image: var(--sector-job-1, url('https://images.unsplash.com/photo-1776661616822-ba34fe4e5638?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(2) { --job-image: var(--sector-job-2, url('https://images.unsplash.com/photo-1785788682899-101daed965b6?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(3) { --job-image: var(--sector-job-3, url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(4) { --job-image: var(--sector-job-4, url('https://images.unsplash.com/photo-1763736809655-9337caf643cc?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(5) { --job-image: var(--sector-job-5, url('https://images.unsplash.com/photo-1776240657422-1b5afd515f3f?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(6) { --job-image: var(--sector-job-6, url('https://images.unsplash.com/photo-1546883737-da9c5102ed9c?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+
+.engineering-sector-page {
+  --sector-hero-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=88');
+  --sector-intro-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1300&q=88');
+  --sector-job-1: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=84');
+  --sector-job-2: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=84');
+  --sector-job-3: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=84');
+  --sector-job-4: url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=900&q=84');
+  --sector-job-5: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=84');
+  --sector-job-6: url('https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?auto=format&fit=crop&w=900&q=84');
+}
+
+.logistics-sector-page {
+  --sector-hero-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=88');
+  --sector-intro-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1300&q=88');
+  --sector-job-1: url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=84');
+  --sector-job-2: url('https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=900&q=84');
+  --sector-job-3: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=84');
+  --sector-job-4: url('https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=900&q=84');
+  --sector-job-5: url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=84');
+  --sector-job-6: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=84');
+}
+
+.healthcare-sector-page {
+  --sector-hero-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=88');
+  --sector-intro-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1300&q=88');
+  --sector-job-1: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=900&q=84');
+  --sector-job-2: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=84');
+  --sector-job-3: url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=84');
+  --sector-job-4: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=84');
+  --sector-job-5: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=84');
+  --sector-job-6: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=84');
+}
+
+.hospitality-sector-page {
+  --sector-hero-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=88');
+  --sector-intro-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1300&q=88');
+  --sector-job-1: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=84');
+  --sector-job-2: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=84');
+  --sector-job-3: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=84');
+  --sector-job-4: url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=900&q=84');
+  --sector-job-5: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=84');
+  --sector-job-6: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=84');
+}
+
+.professional-sector-page {
+  --sector-hero-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=88');
+  --sector-intro-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1300&q=88');
+  --sector-job-1: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=84');
+  --sector-job-2: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=84');
+  --sector-job-3: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=84');
+  --sector-job-4: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=84');
+  --sector-job-5: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=84');
+  --sector-job-6: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=84');
+}
+
+.sector-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 82px 0;
+  background: #d6b34f;
+}
+
+.sector-cta::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  top: -230px;
+  border: 42px solid rgba(6,38,75,.09);
+  border-radius: 50%;
+}
+
+.sector-cta .container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 96px);
+}
+
+.sector-cta h2 {
+  max-width: 720px;
+  margin-bottom: 12px;
+  font-size: clamp(35px, 4vw, 52px);
+}
+
+.sector-cta p {
+  margin: 0;
+  color: #443f2f;
+}
+
+.sector-contact-options {
+  display: grid;
+  gap: 10px;
+}
+
+.sector-contact-option {
+  min-height: 76px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid rgba(11, 31, 52, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.32);
+  color: #0b1f34;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.sector-contact-option:hover,
+.sector-contact-option:focus-visible {
+  border-color: rgba(11, 31, 52, 0.32);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.sector-contact-label {
+  color: rgba(11, 31, 52, 0.7);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sector-contact-option strong {
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .sector-intro-grid { grid-template-columns: 1fr; }
+  .sector-intro-grid { gap: 75px; }
+  .sector-photo { min-height: 500px; }
+  .sector-job-grid { grid-template-columns: repeat(2, 1fr); }
+  .sector-cta .container { grid-template-columns: 1fr; align-items: flex-start; }
+}
+
+@media (max-width: 650px) {
+  .sector-hero h1 { font-size: clamp(48px, 13.5vw, 66px) !important; }
+  .sector-intro,
+  .sector-jobs { padding: 80px 0; }
+  .sector-intro-grid { gap: 60px; }
+  .sector-photo {
+    min-height: 400px;
+    margin-left: 10px;
+    border-radius: 6px 42px 6px 42px;
+    box-shadow: -10px 10px 0 #173d65;
+  }
+  .sector-photo::after { top: -14px; right: -8px; width: 100px; height: 100px; }
+  .sector-copy h2,
+  .sector-jobs-heading h2 { font-size: 40px; letter-spacing: -1.4px; }
+  .sector-focus { padding-bottom: 85px; }
+  .sector-focus-card { padding: 52px 25px; border-radius: 16px 54px 16px 54px; box-shadow: 10px 10px 0 #9fb5ca; }
+  .sector-focus-card h2 { font-size: 40px; letter-spacing: -1.5px; }
+  .sector-focus-card p { font-size: 15px; }
+  .sector-job-grid { grid-template-columns: 1fr; }
+  .sector-job { min-height: 0; }
+  .sector-cta { padding: 65px 0; }
+  .sector-contact-options { width: 100%; }
+}
