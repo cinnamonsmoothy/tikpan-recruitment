@@ -17,6 +17,13 @@
 .job-filters input:focus, .job-filters select:focus { border-color: #d6b34f; box-shadow: 0 0 0 3px rgba(214,179,79,.14); }
 .job-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
 .job-card { position: relative; display: flex; aspect-ratio: 4 / 3; flex-direction: column; justify-content: space-between; gap: 20px; padding: 28px; overflow: hidden; border: 1px solid #e0e7ee; border-radius: 11px; background: #fff; box-shadow: 0 8px 24px rgba(4,27,52,.045); transition: border-color .2s ease, box-shadow .2s ease; }
+.job-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+.job-pagination[hidden] { display: none; }
+.job-pagination-button { min-width: 42px; height: 42px; padding: 0 14px; border: 1px solid #d8e1e9; border-radius: 8px; background: #fff; color: #14314d; font: inherit; font-weight: 700; cursor: pointer; transition: border-color .2s ease, background-color .2s ease, color .2s ease; }
+.job-pagination-button:hover:not(:disabled), .job-pagination-button:focus-visible { border-color: #14314d; outline: none; }
+.job-pagination-button.is-active { border-color: #14314d; background: #14314d; color: #fff; }
+.job-pagination-button:disabled { opacity: .42; cursor: default; }
+.job-pagination-ellipsis { padding: 0 3px; color: #617486; }
 .job-card > div { width: 100%; }
 .job-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #d6b34f; transform: scaleY(0); transition: transform .2s ease; }
 .job-card:hover { border-color: #d6b34f; box-shadow: 0 15px 34px rgba(4,27,52,.09); }

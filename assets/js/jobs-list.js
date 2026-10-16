@@ -7,8 +7,11 @@
   const sector = document.querySelector('#job-sector');
   const location = document.querySelector('#job-location');
   const type = document.querySelector('#job-type');
+  const pagination = document.querySelector('#jobs-pagination');
+  const PAGE_SIZE = 20;
   let jobs = [];
   let loading = false;
+  let currentPage = 1;
 
   const escapeHtml = function (value) {
     const node = document.createElement('div');
@@ -28,6 +31,66 @@
       select.value = current;
     }
   };
+  const pageNumbers = function (totalPages) {
+    if (totalPages <= 7) {
+      return Array.from({ length: totalPages }, function (_, index) { return index + 1; });
+    }
+    const pages = [1];
+    const start = Math.max(2, currentPage - 1);
+    const end = Math.min(totalPages - 1, currentPage + 1);
+    if (start > 2) pages.push('start-ellipsis');
+    for (let page = start; page <= end; page += 1) pages.push(page);
+    if (end < totalPages - 1) pages.push('end-ellipsis');
+    pages.push(totalPages);
+    return pages;
+  };
+  const renderPagination = function (totalPages) {
+    pagination.innerHTML = '';
+    pagination.hidden = totalPages <= 1;
+    if (totalPages <= 1) return;
+
+    const addButton = function (label, page, options) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'job-pagination-button' + (options.active ? ' is-active' : '');
+      button.textContent = label;
+      button.disabled = options.disabled;
+      if (options.active) button.setAttribute('aria-current', 'page');
+      button.setAttribute('aria-label', options.ariaLabel || label);
+      button.addEventListener('click', function () {
+        currentPage = page;
+        render();
+        document.querySelector('#jobs-heading').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      pagination.appendChild(button);
+    };
+
+    addButton('Previous', currentPage - 1, {
+      disabled: currentPage === 1,
+      active: false,
+      ariaLabel: 'Previous vacancy page'
+    });
+    pageNumbers(totalPages).forEach(function (page) {
+      if (typeof page !== 'number') {
+        const ellipsis = document.createElement('span');
+        ellipsis.className = 'job-pagination-ellipsis';
+        ellipsis.textContent = '…';
+        ellipsis.setAttribute('aria-hidden', 'true');
+        pagination.appendChild(ellipsis);
+        return;
+      }
+      addButton(String(page), page, {
+        disabled: false,
+        active: page === currentPage,
+        ariaLabel: 'Vacancy page ' + page
+      });
+    });
+    addButton('Next', currentPage + 1, {
+      disabled: currentPage === totalPages,
+      active: false,
+      ariaLabel: 'Next vacancy page'
+    });
+  };
   const render = function () {
     const query = search.value.trim().toLowerCase();
     const visible = jobs.filter(function (job) {
@@ -39,7 +102,11 @@
         (!location.value || job.location === location.value) &&
         (!type.value || job.employmentType === type.value);
     });
-    list.innerHTML = visible.map(function (job) {
+    const totalPages = Math.ceil(visible.length / PAGE_SIZE);
+    currentPage = Math.min(currentPage, Math.max(totalPages, 1));
+    const pageStart = (currentPage - 1) * PAGE_SIZE;
+    const pageJobs = visible.slice(pageStart, pageStart + PAGE_SIZE);
+    list.innerHTML = pageJobs.map(function (job) {
       const metadata = [job.location, job.employmentType, job.workplace, job.salaryDisplay]
         .filter(Boolean)
         .map(function (item) { return '<span>' + escapeHtml(item) + '</span>'; })
@@ -55,6 +122,7 @@
     count.textContent = visible.length + (visible.length === 1 ? ' vacancy' : ' vacancies');
     empty.hidden = visible.length !== 0;
     list.hidden = visible.length === 0;
+    renderPagination(totalPages);
   };
 
   const loadJobs = function () {
@@ -78,6 +146,7 @@
       count.textContent = 'Vacancies unavailable';
       empty.hidden = false;
       list.hidden = true;
+      pagination.hidden = true;
     }).finally(function () {
       loading = false;
     });
@@ -89,6 +158,9 @@
   }, window.JobsBoardSource ? window.JobsBoardSource.refreshMs() : 10000);
 
   [search, sector, location, type].forEach(function (control) {
-    control.addEventListener(control === search ? 'input' : 'change', render);
+    control.addEventListener(control === search ? 'input' : 'change', function () {
+      currentPage = 1;
+      render();
+    });
   });
 })();
