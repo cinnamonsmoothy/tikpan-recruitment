@@ -3,6 +3,7 @@
   if (!list) return;
   const count = document.querySelector('#jobs-count');
   const empty = document.querySelector('#jobs-empty');
+  const loadingState = document.querySelector('#jobs-loading');
   const search = document.querySelector('#job-search');
   const sector = document.querySelector('#job-sector');
   const location = document.querySelector('#job-location');
@@ -138,11 +139,13 @@
       fillSelect(location, Array.from(new Set(jobs.map(function (job) { return job.location; }))));
       fillSelect(type, Array.from(new Set(jobs.map(function (job) { return job.employmentType; }))));
       list.setAttribute('aria-busy', 'false');
+      loadingState.hidden = true;
       render();
     })
     .catch(function () {
       jobs = [];
       list.setAttribute('aria-busy', 'false');
+      loadingState.hidden = true;
       count.textContent = 'Vacancies unavailable';
       empty.hidden = false;
       list.hidden = true;

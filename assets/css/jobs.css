@@ -18,6 +18,11 @@
 .job-filters label > span { color: #06264b; font-size: 10px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; }
 .job-filters input, .job-filters select { width: 100%; min-height: 46px; padding: 0 13px; border: 1px solid #dbe3eb; border-radius: 7px; outline: 0; background: #fff; color: #14263b; font: 500 13px Inter, Arial, sans-serif; }
 .job-filters input:focus, .job-filters select:focus { border-color: #d6b34f; box-shadow: 0 0 0 3px rgba(214,179,79,.14); }
+.jobs-loading { display: flex; min-height: 160px; align-items: center; justify-content: center; gap: 12px; color: #627184; font-size: 13px; font-weight: 700; }
+.jobs-loading[hidden] { display: none; }
+.jobs-loading-spinner { width: 27px; height: 27px; border: 3px solid #dbe4ec; border-top-color: #d6b34f; border-radius: 50%; animation: jobs-loading-spin .75s linear infinite; }
+@keyframes jobs-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .jobs-loading-spinner { animation-duration: 1.8s; } }
 .job-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
 .job-card { position: relative; display: flex; aspect-ratio: 4 / 3; flex-direction: column; justify-content: space-between; gap: 20px; padding: 28px; overflow: hidden; border: 1px solid #e0e7ee; border-radius: 11px; background: #fff; box-shadow: 0 8px 24px rgba(4,27,52,.045); transition: border-color .2s ease, box-shadow .2s ease; }
 .job-pagination { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 36px; }

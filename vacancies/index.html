@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/pages.css?v=19">
-  <link rel="stylesheet" href="../assets/css/jobs.css?v=6">
+  <link rel="stylesheet" href="../assets/css/jobs.css?v=7">
   <link rel="stylesheet" href="../assets/css/scroll-effects.css?v=20" data-scroll-effects-styles>
   <link rel="stylesheet" href="../assets/css/site-layout-v24.css" data-site-layout>
   <link rel="stylesheet" href="../assets/css/site-header.css?v=21" data-site-header-styles>
@@ -43,6 +43,10 @@
           <label><span>Location</span><select id="job-location"><option value="">All locations</option></select></label>
           <label><span>Job type</span><select id="job-type"><option value="">All job types</option></select></label>
         </form>
+        <div id="jobs-loading" class="jobs-loading" role="status">
+          <span class="jobs-loading-spinner" aria-hidden="true"></span>
+          <span>Loading vacancies…</span>
+        </div>
         <div id="job-list" class="job-list" aria-live="polite" aria-busy="true"></div>
         <nav id="jobs-pagination" class="job-pagination" aria-label="Vacancy pages" hidden></nav>
         <div id="jobs-empty" class="jobs-empty" hidden>
@@ -55,7 +59,7 @@
   </main>
   <footer class="footer" data-site-footer data-root="../"></footer>
   <script src="../assets/js/site-footer.js?v=19"></script>
-  <script src="../assets/js/jobs-list.js?v=8"></script>
+  <script src="../assets/js/jobs-list.js?v=9"></script>
   <script src="../assets/js/scroll-effects.js?v=21"></script>
 </body>
 </html>
