@@ -47,7 +47,41 @@
 .jobs-empty { padding: 55px 30px; border: 1px solid #e3e9ef; border-radius: 12px; background: #fff; text-align: center; }
 .jobs-empty h3 { margin-bottom: 8px; color: #06264b; font-size: 25px; }
 .jobs-empty p { max-width: 560px; margin: 0 auto 22px; color: #627184; font-size: 14px; }
-.job-detail-hero { min-height: 500px; display: flex; align-items: end; padding-bottom: 80px; }
+.job-detail-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 500px;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  padding-bottom: 80px;
+  background:
+    radial-gradient(circle at 82% 24%, rgba(214,179,79,.25) 0, rgba(214,179,79,0) 25%),
+    radial-gradient(circle at 10% 115%, rgba(31,91,148,.5) 0, rgba(31,91,148,0) 43%),
+    linear-gradient(125deg, #03182e 0%, #06264b 56%, #0a3b69 100%);
+}
+.job-detail-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 74px;
+  right: -80px;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 74px rgba(255,255,255,.045), 0 0 0 148px rgba(255,255,255,.022);
+}
+.job-detail-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, transparent 0 72px, rgba(255,255,255,.027) 72px 73px);
+  -webkit-mask-image: linear-gradient(90deg, transparent 5%, #000 60%);
+  mask-image: linear-gradient(90deg, transparent 5%, #000 60%);
+}
+.job-detail-hero .container { position: relative; z-index: 1; }
 .job-detail-hero h1 { max-width: 850px; font-size: clamp(42px, 6vw, 72px); }
 .job-detail-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; color: #d5e2f0; font-size: 13px; font-weight: 600; }
 .job-detail-meta span { display: inline-flex; align-items: center; gap: 7px; }
@@ -96,4 +130,5 @@
   .job-card { padding: 24px 21px; }
   .job-card-action { margin-top: 2px; }
   .job-detail-hero { min-height: 460px; padding-bottom: 60px; }
+  .job-detail-hero::before { top: 115px; right: -155px; width: 300px; height: 300px; box-shadow: 0 0 0 58px rgba(255,255,255,.04), 0 0 0 116px rgba(255,255,255,.02); }
 }
