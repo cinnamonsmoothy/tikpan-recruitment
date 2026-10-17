@@ -1,6 +1,6 @@
 const headerScript = document.currentScript;
 const headerStyles = headerScript
-  ? new URL('../css/site-header.css?v=21', headerScript.src).href
+  ? new URL('../css/site-header.css?v=22', headerScript.src).href
   : '';
 
 document.querySelectorAll('[data-site-header]').forEach(function (host) {
@@ -38,7 +38,7 @@ document.querySelectorAll('[data-site-header]').forEach(function (host) {
           <a href="${root}index.html#contact">Contact</a>
         </div>
         <a href="${root}index.html#contact" class="header-cta">Request Staff ↗</a>
-        <button class="menu" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <button class="menu" type="button" aria-label="Open navigation" aria-controls="navlinks" aria-expanded="false">☰</button>
       </nav>
     </div>`;
 
@@ -46,16 +46,36 @@ document.querySelectorAll('[data-site-header]').forEach(function (host) {
   const menu = shadow.querySelector('.menu');
   const links = shadow.querySelector('.links');
 
-  menu.addEventListener('click', function () {
-    const open = links.classList.toggle('open');
+  function setMenuOpen(open) {
+    links.classList.toggle('open', open);
+    header.classList.toggle('menu-open', open);
     menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menu.textContent = open ? '×' : '☰';
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+  }
+
+  setMenuOpen(false);
+
+  menu.addEventListener('click', function () {
+    setMenuOpen(!links.classList.contains('open'));
   });
 
   links.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
-      links.classList.remove('open');
-      menu.setAttribute('aria-expanded', 'false');
+      setMenuOpen(false);
     });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && links.classList.contains('open')) {
+      setMenuOpen(false);
+      menu.focus();
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && links.classList.contains('open')) setMenuOpen(false);
   });
 
   function updateHeader() {
