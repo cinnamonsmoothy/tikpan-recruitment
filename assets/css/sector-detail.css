@@ -1,7 +1,7 @@
 .sector-hero.hero::before {
   background-image:
     linear-gradient(90deg, rgba(4,27,52,.97) 0%, rgba(4,27,52,.84) 48%, rgba(4,27,52,.28) 100%),
-    var(--sector-hero-image, url('https://images.unsplash.com/photo-1785788682899-101daed965b6?auto=format&fit=crop&w=2000&q=88'));
+    var(--sector-hero-image, url('../images/site/1785788682899-101daed965b6.webp'));
   background-position: var(--sector-hero-position, center);
 }
 
@@ -30,7 +30,7 @@
   border-radius: 8px 68px 8px 68px;
   background:
     linear-gradient(180deg, rgba(4,27,52,.02), rgba(4,27,52,.15)),
-    var(--sector-intro-image, url('https://images.unsplash.com/photo-1776661616822-ba34fe4e5638?auto=format&fit=crop&w=1300&q=88')) var(--sector-intro-position, center) / cover;
+    var(--sector-intro-image, url('../images/site/1776661616822-ba34fe4e5638.webp')) var(--sector-intro-position, center) / cover;
   box-shadow: -22px 22px 0 #173d65;
 }
 
@@ -165,66 +165,66 @@
   line-height: 1.35;
 }
 
-.sector-job:nth-child(1) { --job-image: var(--sector-job-1, url('https://images.unsplash.com/photo-1776661616822-ba34fe4e5638?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
-.sector-job:nth-child(2) { --job-image: var(--sector-job-2, url('https://images.unsplash.com/photo-1785788682899-101daed965b6?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
-.sector-job:nth-child(3) { --job-image: var(--sector-job-3, url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
-.sector-job:nth-child(4) { --job-image: var(--sector-job-4, url('https://images.unsplash.com/photo-1763736809655-9337caf643cc?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
-.sector-job:nth-child(5) { --job-image: var(--sector-job-5, url('https://images.unsplash.com/photo-1776240657422-1b5afd515f3f?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
-.sector-job:nth-child(6) { --job-image: var(--sector-job-6, url('https://images.unsplash.com/photo-1546883737-da9c5102ed9c?auto=format&fit=crop&w=900&q=84')); --job-position: center; }
+.sector-job:nth-child(1) { --job-image: var(--sector-job-1, url('../images/site/1776661616822-ba34fe4e5638.webp')); --job-position: center; }
+.sector-job:nth-child(2) { --job-image: var(--sector-job-2, url('../images/site/1785788682899-101daed965b6.webp')); --job-position: center; }
+.sector-job:nth-child(3) { --job-image: var(--sector-job-3, url('../images/site/1494412519320-aa613dfb7738.webp')); --job-position: center; }
+.sector-job:nth-child(4) { --job-image: var(--sector-job-4, url('../images/site/1763736809655-9337caf643cc.webp')); --job-position: center; }
+.sector-job:nth-child(5) { --job-image: var(--sector-job-5, url('../images/site/1776240657422-1b5afd515f3f.webp')); --job-position: center; }
+.sector-job:nth-child(6) { --job-image: var(--sector-job-6, url('../images/site/1546883737-da9c5102ed9c.webp')); --job-position: center; }
 
 .engineering-sector-page {
-  --sector-hero-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=88');
-  --sector-intro-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1300&q=88');
-  --sector-job-1: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=84');
-  --sector-job-2: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=84');
-  --sector-job-3: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=84');
-  --sector-job-4: url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=900&q=84');
-  --sector-job-5: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=900&q=84');
-  --sector-job-6: url('https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?auto=format&fit=crop&w=900&q=84');
+  --sector-hero-image: url('../images/site/1504307651254-35680f356dfd.webp');
+  --sector-intro-image: url('../images/site/1504917595217-d4dc5ebe6122.webp');
+  --sector-job-1: url('../images/site/1541888946425-d81bb19240f5.webp');
+  --sector-job-2: url('../images/site/1581094794329-c8112a89af12.webp');
+  --sector-job-3: url('../images/site/1503387762-592deb58ef4e.webp');
+  --sector-job-4: url('../images/site/1531834685032-c34bf0d84c77.webp');
+  --sector-job-5: url('../images/site/1589939705384-5185137a7f0f.webp');
+  --sector-job-6: url('../images/site/1513467535987-fd81bc7d62f8.webp');
 }
 
 .logistics-sector-page {
-  --sector-hero-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2000&q=88');
-  --sector-intro-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1300&q=88');
-  --sector-job-1: url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=84');
-  --sector-job-2: url('https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=900&q=84');
-  --sector-job-3: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=84');
-  --sector-job-4: url('https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=900&q=84');
-  --sector-job-5: url('https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=900&q=84');
-  --sector-job-6: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=84');
+  --sector-hero-image: url('../images/site/1586528116311-ad8dd3c8310d.webp');
+  --sector-intro-image: url('../images/site/1553413077-190dd305871c.webp');
+  --sector-job-1: url('../images/site/1565793298595-6a879b1d9492.webp');
+  --sector-job-2: url('../images/site/1580674285054-bed31e145f59.webp');
+  --sector-job-3: url('../images/site/1601584115197-04ecc0da31d7.webp');
+  --sector-job-4: url('../images/site/1565891741441-64926e441838.webp');
+  --sector-job-5: url('../images/site/1587293852726-70cdb56c2866.webp');
+  --sector-job-6: url('../images/site/1494412574643-ff11b0a5c1c3.webp');
 }
 
 .healthcare-sector-page {
-  --sector-hero-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=88');
-  --sector-intro-image: url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1300&q=88');
-  --sector-job-1: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=900&q=84');
-  --sector-job-2: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=84');
-  --sector-job-3: url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=84');
-  --sector-job-4: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=84');
-  --sector-job-5: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=84');
-  --sector-job-6: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=84');
+  --sector-hero-image: url('../images/site/1576091160399-112ba8d25d1d.webp');
+  --sector-intro-image: url('../images/site/1584515933487-779824d29309.webp');
+  --sector-job-1: url('../images/site/1532938911079-1b06ac7ceec7.webp');
+  --sector-job-2: url('../images/site/1559839734-2b71ea197ec2.webp');
+  --sector-job-3: url('../images/site/1584982751601-97dcc096659c.webp');
+  --sector-job-4: url('../images/site/1577219491135-ce391730fb2c.webp');
+  --sector-job-5: url('../images/site/1414235077428-338989a2e8c0.webp');
+  --sector-job-6: url('../images/site/1566073771259-6a8506099945.webp');
 }
 
 .hospitality-sector-page {
-  --sector-hero-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=88');
-  --sector-intro-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1300&q=88');
-  --sector-job-1: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=84');
-  --sector-job-2: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=84');
-  --sector-job-3: url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=900&q=84');
-  --sector-job-4: url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=900&q=84');
-  --sector-job-5: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=900&q=84');
-  --sector-job-6: url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=84');
+  --sector-hero-image: url('../images/site/1566073771259-6a8506099945.webp');
+  --sector-intro-image: url('../images/site/1550966871-3ed3cdb5ed0c.webp');
+  --sector-job-1: url('../images/site/1517841905240-472988babdf9.webp');
+  --sector-job-2: url('../images/site/1414235077428-338989a2e8c0.webp');
+  --sector-job-3: url('../images/site/1577219491135-ce391730fb2c.webp');
+  --sector-job-4: url('../images/site/1559329007-40df8a9345d8.webp');
+  --sector-job-5: url('../images/site/1578683010236-d716f9a3f461.webp');
+  --sector-job-6: url('../images/site/1515003197210-e0cd71810b5f.webp');
 }
 
 .professional-sector-page {
-  --sector-hero-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2000&q=88');
-  --sector-intro-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1300&q=88');
-  --sector-job-1: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=84');
-  --sector-job-2: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=84');
-  --sector-job-3: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=84');
-  --sector-job-4: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=84');
-  --sector-job-5: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=84');
-  --sector-job-6: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=84');
+  --sector-hero-image: url('../images/site/1497366811353-6870744d04b2.webp');
+  --sector-intro-image: url('../images/site/1521737711867-e3b97375f902.webp');
+  --sector-job-1: url('../images/site/1556761175-b413da4baf72.webp');
+  --sector-job-2: url('../images/site/1522202176988-66273c2fd55f.webp');
+  --sector-job-3: url('../images/site/1522071820081-009f0129c71c.webp');
+  --sector-job-4: url('../images/site/1497366754035-f200968a6e72.webp');
+  --sector-job-5: url('../images/site/1551836022-d5d88e9218df.webp');
+  --sector-job-6: url('../images/site/1556761175-4b46a572b786.webp');
 }
 
 .sector-cta {

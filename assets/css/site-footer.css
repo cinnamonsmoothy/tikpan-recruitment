@@ -5,12 +5,15 @@
 }
 
 .footer[data-site-footer] .container { display: block; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 55px; }
+.footer-grid { display: grid; grid-template-columns: 1.55fr 1.25fr .8fr .8fr; gap: 44px; }
 .footer-grid h4 { margin: 0 0 12px; color: #fff; font-size: 13px; }
 .footer-grid p, .footer-grid a { font-size: 12px; line-height: 2; }
 .footer-grid p { max-width: 430px; margin: 14px 0 0; }
 .footer-grid a { display: block; }
 .footer-grid a:hover { color: #d6b34f; }
+.footer-company { display: grid; gap: 5px; max-width: 440px; margin-top: 22px; color: #8fa5b9; font-size: 11px; line-height: 1.6; }
+.footer-company strong { color: #fff; font-size: 11px; letter-spacing: .25px; }
+.footer-company span { display: block; }
 .footer-brand {
   display: block;
   width: 220px;
@@ -29,4 +32,8 @@
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-brand { width: 180px; height: 50px; background-position: 0 -66px; background-size: 180px; }
   .copyright { margin-top: 32px; }
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  .footer-grid { grid-template-columns: 1.4fr 1fr; }
 }

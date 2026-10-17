@@ -8,7 +8,7 @@ const outputRoot = join(projectRoot, 'dist-pages');
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
-for (const directory of ['about', 'assets', 'sectors']) {
+for (const directory of ['about', 'assets', 'privacy', 'sectors']) {
   await cp(join(projectRoot, directory), join(outputRoot, directory), { recursive: true });
 }
 
