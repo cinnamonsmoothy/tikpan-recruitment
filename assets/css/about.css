@@ -111,8 +111,8 @@
 .team-section { padding: 120px 0; background: #fff; }
 .team-heading { margin-bottom: 52px; text-align: center; }
 .team-heading h2 { margin-bottom: 0; }
-.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; padding: 0 18px 18px 0; }
-.team-card { overflow: hidden; border: 0; border-radius: 12px 54px 12px 12px; background: #f5f8fb; box-shadow: 18px 18px 0 #06264b; transition: transform .35s ease, box-shadow .35s ease; }
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.team-card { overflow: hidden; border: 0; border-radius: 0; background: #f5f8fb; }
 .team-photo { position: relative; aspect-ratio: 4 / 4.6; overflow: hidden; background: #dce5ed; }
 .team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 28%; background: linear-gradient(transparent, rgba(4,27,52,.18)); pointer-events: none; }
 .team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .65s cubic-bezier(.2,.7,.2,1); }
@@ -122,12 +122,11 @@
 .team-details p { margin: 0; color: #627184; font-size: 14px; font-weight: 700; letter-spacing: .3px; }
 
 @media (hover: hover) {
-  .team-card:hover { transform: translate(-4px, -4px); box-shadow: 22px 22px 0 #06264b; }
   .team-card:hover .team-photo img { transform: scale(1.055); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .team-card, .team-photo img { transition: none; }
+  .team-photo img { transition: none; }
 }
 
 .principles { padding: 120px 0; background: #f5f8fb; }
@@ -199,8 +198,7 @@
   .mission-card h2 { font-size: 40px; letter-spacing: -1.5px; }
   .mission-card p { font-size: 15px; }
   .team-heading { margin-bottom: 34px; }
-  .team-grid { grid-template-columns: 1fr; gap: 30px; padding: 0 10px 10px 0; }
-  .team-card { box-shadow: 10px 10px 0 #06264b; }
+  .team-grid { grid-template-columns: 1fr; gap: 30px; }
   .team-photo { aspect-ratio: 4 / 4.5; }
   .team-details { padding: 23px 22px 26px; }
   .principles-list article { grid-template-columns: 58px 1fr; gap: 18px; padding: 24px 20px; border-radius: 14px; }
