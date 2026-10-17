@@ -112,7 +112,7 @@
 .team-heading { margin-bottom: 52px; text-align: center; }
 .team-heading h2 { margin-bottom: 0; }
 .team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; padding: 0 18px 18px 0; }
-.team-card { overflow: hidden; border: 1px solid #e0e7ee; border-radius: 12px 54px 12px 12px; background: #f5f8fb; box-shadow: 18px 18px 0 #9fb5ca; }
+.team-card { overflow: hidden; border: 1px solid #e0e7ee; border-radius: 12px 54px 12px 12px; background: #f5f8fb; box-shadow: 18px 18px 0 #06264b; }
 .team-photo { position: relative; aspect-ratio: 4 / 4.6; overflow: hidden; background: #dce5ed; }
 .team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 28%; background: linear-gradient(transparent, rgba(4,27,52,.18)); pointer-events: none; }
 .team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -191,7 +191,7 @@
   .mission-card p { font-size: 15px; }
   .team-heading { margin-bottom: 34px; }
   .team-grid { grid-template-columns: 1fr; gap: 30px; padding: 0 10px 10px 0; }
-  .team-card { box-shadow: 10px 10px 0 #9fb5ca; }
+  .team-card { box-shadow: 10px 10px 0 #06264b; }
   .team-photo { aspect-ratio: 4 / 4.5; }
   .team-details { padding: 23px 22px 26px; }
   .principles-list article { grid-template-columns: 58px 1fr; gap: 18px; padding: 24px 20px; border-radius: 14px; }
