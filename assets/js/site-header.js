@@ -15,7 +15,6 @@ document.querySelectorAll('[data-site-header]').forEach(function (host) {
       <nav class="nav">
         <a class="brand" href="${root}index.html" aria-label="Tikpan home"></a>
         <div class="links" id="navlinks">
-          <a href="${root}about/index.html">About Us</a>
           <div class="nav-dropdown">
             <a href="${root}index.html#employers" class="dropdown-trigger">Employers <span class="nav-chevron" aria-hidden="true"><svg viewBox="0 0 12 8"><path d="m1 1 5 5 5-5"/></svg></span></a>
             <div class="dropdown-menu">
@@ -35,6 +34,7 @@ document.querySelectorAll('[data-site-header]').forEach(function (host) {
               <a href="${root}vacancies/index.html">View Vacancies</a>
             </div>
           </div>
+          <a href="${root}about/index.html">About Us</a>
           <a href="${root}index.html#contact">Contact</a>
         </div>
         <a href="${root}index.html#contact" class="header-cta">Request Staff ↗</a>
