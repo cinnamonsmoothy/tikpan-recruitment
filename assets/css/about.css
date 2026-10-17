@@ -109,11 +109,10 @@
 .mission-card p { max-width: 900px; margin: 0 auto; color: #cbd8e5; font-size: 17px; }
 
 .team-section { padding: 120px 0; background: #fff; }
-.team-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 52px; }
+.team-heading { margin-bottom: 52px; text-align: center; }
 .team-heading h2 { margin-bottom: 0; }
-.team-heading p { max-width: 580px; margin: 0 0 7px; color: #627184; font-size: 16px; }
-.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
-.team-card { overflow: hidden; border: 1px solid #e0e7ee; border-radius: 12px 54px 12px 12px; background: #f5f8fb; box-shadow: 0 14px 38px rgba(4,27,52,.07); }
+.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; padding: 0 18px 18px 0; }
+.team-card { overflow: hidden; border: 1px solid #e0e7ee; border-radius: 12px 54px 12px 12px; background: #f5f8fb; box-shadow: 18px 18px 0 #9fb5ca; }
 .team-photo { position: relative; aspect-ratio: 4 / 4.6; overflow: hidden; background: #dce5ed; }
 .team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 28%; background: linear-gradient(transparent, rgba(4,27,52,.18)); pointer-events: none; }
 .team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
@@ -175,8 +174,6 @@
   .about-intro-grid { grid-template-columns: 1fr; gap: 75px; }
   .about-photo { min-height: 500px; }
   .about-cta .container { align-items: flex-start; flex-direction: column; }
-  .team-heading { display: block; }
-  .team-heading p { margin-top: 16px; }
 }
 
 @media (max-width: 650px) {
@@ -193,7 +190,8 @@
   .mission-card h2 { font-size: 40px; letter-spacing: -1.5px; }
   .mission-card p { font-size: 15px; }
   .team-heading { margin-bottom: 34px; }
-  .team-grid { grid-template-columns: 1fr; gap: 22px; }
+  .team-grid { grid-template-columns: 1fr; gap: 30px; padding: 0 10px 10px 0; }
+  .team-card { box-shadow: 10px 10px 0 #9fb5ca; }
   .team-photo { aspect-ratio: 4 / 4.5; }
   .team-details { padding: 23px 22px 26px; }
   .principles-list article { grid-template-columns: 58px 1fr; gap: 18px; padding: 24px 20px; border-radius: 14px; }
