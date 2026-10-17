@@ -19,12 +19,16 @@
     heading.textContent = 'Current opportunities with Tikpan.';
     intro.textContent = 'Explore our latest vacancies and find a role that matches your experience.';
     list.innerHTML = jobs.slice(0, 3).map(function (job) {
-      const details = [job.location, job.employmentType, job.workplace].filter(Boolean).join(' · ');
+      const metadata = [job.location, job.employmentType, job.workplace, job.salaryDisplay]
+        .filter(Boolean)
+        .map(function (item) { return '<span>' + escapeHtml(item) + '</span>'; })
+        .join('');
       const href = 'vacancies/job.html?job=' + encodeURIComponent(job.slug || job.id || '');
-      return '<article class="job"><span class="pill">' + escapeHtml(job.sector || 'Vacancy') + '</span>' +
+      return '<article class="job-card"><div><span class="job-card-sector">' + escapeHtml(job.sector || 'Vacancy') + '</span>' +
         '<h3>' + escapeHtml(job.title || 'Current vacancy') + '</h3>' +
-        '<p>' + escapeHtml(details) + '</p>' +
-        '<a href="' + href + '">View role ↗</a></article>';
+        '<div class="job-meta">' + metadata + '</div></div>' +
+        '<span class="job-card-action">View role <span aria-hidden="true">→</span></span>' +
+        '<a class="job-card-link" href="' + href + '" aria-label="View ' + escapeHtml(job.title || 'current vacancy') + '"></a></article>';
     }).join('');
     note.innerHTML = '<a href="vacancies/index.html">View all vacancies ↗</a>';
     section.hidden = false;
