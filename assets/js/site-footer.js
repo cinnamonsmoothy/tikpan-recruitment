@@ -47,7 +47,7 @@ document.querySelectorAll('[data-site-footer]').forEach(function (footer) {
           <a href="https://wa.me/447383831601">WhatsApp: +44 7383 831601</a>
         </div>
       </div>
-      <div class="copyright">© <span id="year" data-footer-year></span> Tikpan Recruitment Group Ltd. All rights reserved. Website designed by <a href="https://findcandidates.co.uk" target="_blank" rel="noopener noreferrer">FindCandidates.co.uk</a>.</div>
+      <div class="copyright"><span>© <span id="year" data-footer-year></span> Tikpan Recruitment Group Ltd. All rights reserved.</span><span class="design-credit">Website designed by <a href="https://findcandidates.co.uk" target="_blank" rel="noopener noreferrer">FindCandidates.co.uk</a>.</span></div>
     </div>`;
 
   footer.querySelector('[data-footer-year]').textContent = new Date().getFullYear();

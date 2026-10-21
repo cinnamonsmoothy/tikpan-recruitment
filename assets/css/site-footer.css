@@ -22,11 +22,17 @@
   filter: brightness(0) invert(1);
 }
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   margin-top: 45px;
   padding-top: 23px;
   border-top: 1px solid rgba(255, 255, 255, .11);
   font-size: 11px;
 }
+.design-credit { margin-left: auto; text-align: right; }
 .copyright a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
 .copyright a:hover { color: #d6b34f; }
 
