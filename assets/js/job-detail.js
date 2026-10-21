@@ -27,7 +27,7 @@
       return 'mailto:' + job.email + '?subject=' + encodeURIComponent('Application: ' + job.title);
     }
     if (job.phone) return 'tel:' + job.phone.replace(/[^+\d]/g, '');
-    return '../index.html#contact';
+    return 'mailto:info@tikpanrecruitment.co.uk?subject=' + encodeURIComponent('Application: ' + job.title);
   }
 
   function render(job) {

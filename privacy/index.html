@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><style id="site-loading-style">
+html.site-loading body{background:#041b34}
+html.site-loading:not(.site-ready) body>:not(#site-loader){visibility:hidden!important}
+#site-loader{display:none;position:fixed;inset:0;z-index:2147483647;align-items:center;justify-content:center;background:#041b34;color:#fff;text-align:center;transition:opacity .35s ease,visibility .35s ease}
+html.site-loading #site-loader{display:flex}
+html.site-ready #site-loader{opacity:0;visibility:hidden;pointer-events:none}
+.site-loader-mark{padding:28px;min-width:220px}
+.site-loader-mark strong{display:block;color:#fff;font:700 clamp(30px,7vw,46px)/1.1 Arial,sans-serif;letter-spacing:.14em}
+.site-loader-mark span{display:block;margin-top:9px;color:#d6b34f;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.26em}
+.site-loader-line{display:block;width:94px;height:2px;margin:25px auto 0;background:#d6b34f;transform-origin:left;animation:site-loader-pulse 1.2s ease-in-out infinite alternate}
+@keyframes site-loader-pulse{from{transform:scaleX(.3);opacity:.55}to{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){#site-loader{transition:none}.site-loader-line{animation:none}}
+</style><script>(function(){var h=document.documentElement,finished=false;h.classList.add('site-loading');function ready(){if(finished)return;if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ready,{once:true});return}finished=true;requestAnimationFrame(function(){requestAnimationFrame(function(){document.querySelectorAll('.hero,.about-hero').forEach(function(el){el.classList.add('site-bg-visible','hero-image-visible')});h.classList.add('site-ready');setTimeout(function(){h.classList.remove('site-loading','site-ready')},400)})})}if(document.readyState==='complete')ready();else window.addEventListener('load',ready,{once:true});setTimeout(ready,5000)})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Candidate privacy notice for Tikpan Recruitment Group Ltd.">
@@ -14,7 +26,7 @@
   <link rel="stylesheet" href="../assets/css/site-header.css?v=22" data-site-header-styles>
   <script src="../assets/js/site-header.js?v=23" defer></script>
 </head>
-<body>
+<body><div id="site-loader" role="status" aria-label="Loading Tikpan Recruitment Group"><div class="site-loader-mark"><strong>TIKPAN</strong><span>RECRUITMENT GROUP</span><i class="site-loader-line" aria-hidden="true"></i></div></div>
   <header data-site-header data-root="../"></header>
   <main>
     <section class="page-hero legal-hero">
@@ -42,9 +54,9 @@
         <h2>How long we keep information</h2>
         <p>We keep information only for as long as it is reasonably required for recruitment, placement, legal, accounting or dispute-resolution purposes. Retention depends on the nature of our relationship, whether an application or placement is active, applicable legal requirements and whether you would reasonably expect us to retain your details for future opportunities. Information that is no longer required is securely deleted or anonymised.</p>
         <h2>Your rights</h2>
-        <p>Depending on the circumstances, you may have the right to request access to your information, ask us to correct or delete it, restrict or object to its use, request portability, or withdraw consent. You may contact us using the contact details displayed on this website. We may need to verify your identity before responding.</p>
+        <p>Depending on the circumstances, you may have the right to request access to your information, ask us to correct or delete it, restrict or object to its use, request portability, or withdraw consent. You may contact us directly at <a href="mailto:info@tikpanrecruitment.co.uk">info@tikpanrecruitment.co.uk</a>. We may need to verify your identity before responding.</p>
         <h2>Questions and complaints</h2>
-        <p>Please contact Tikpan Recruitment Group Ltd first if you have a question or concern about your information. You also have the right to complain to the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">Information Commissioner’s Office</a>.</p>
+        <p>Please contact Tikpan Recruitment Group Ltd at <a href="mailto:info@tikpanrecruitment.co.uk">info@tikpanrecruitment.co.uk</a> if you have a question or concern about your information. You also have the right to complain to the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener">Information Commissioner’s Office</a>.</p>
         <h2>Changes to this notice</h2>
         <p>We may update this notice when our services or legal obligations change. The latest version will always be published on this page.</p>
       </article></div>

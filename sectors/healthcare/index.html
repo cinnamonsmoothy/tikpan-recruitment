@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="sector-page healthcare-sector-page">
-<head>
+<head><style id="site-loading-style">
+html.site-loading body{background:#041b34}
+html.site-loading:not(.site-ready) body>:not(#site-loader){visibility:hidden!important}
+#site-loader{display:none;position:fixed;inset:0;z-index:2147483647;align-items:center;justify-content:center;background:#041b34;color:#fff;text-align:center;transition:opacity .35s ease,visibility .35s ease}
+html.site-loading #site-loader{display:flex}
+html.site-ready #site-loader{opacity:0;visibility:hidden;pointer-events:none}
+.site-loader-mark{padding:28px;min-width:220px}
+.site-loader-mark strong{display:block;color:#fff;font:700 clamp(30px,7vw,46px)/1.1 Arial,sans-serif;letter-spacing:.14em}
+.site-loader-mark span{display:block;margin-top:9px;color:#d6b34f;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.26em}
+.site-loader-line{display:block;width:94px;height:2px;margin:25px auto 0;background:#d6b34f;transform-origin:left;animation:site-loader-pulse 1.2s ease-in-out infinite alternate}
+@keyframes site-loader-pulse{from{transform:scaleX(.3);opacity:.55}to{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){#site-loader{transition:none}.site-loader-line{animation:none}}
+</style><script>(function(){var h=document.documentElement,finished=false;h.classList.add('site-loading');function ready(){if(finished)return;if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ready,{once:true});return}finished=true;requestAnimationFrame(function(){requestAnimationFrame(function(){document.querySelectorAll('.hero,.about-hero').forEach(function(el){el.classList.add('site-bg-visible','hero-image-visible')});h.classList.add('site-ready');setTimeout(function(){h.classList.remove('site-loading','site-ready')},400)})})}if(document.readyState==='complete')ready();else window.addEventListener('load',ready,{once:true});setTimeout(ready,5000)})();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Healthcare recruitment support from Tikpan Recruitment Group.">
@@ -17,7 +29,7 @@
   <link rel="stylesheet" href="../../assets/css/site-header.css?v=20" data-site-header-styles>
   <script src="../../assets/js/site-header.js?v=23" defer></script>
 </head>
-<body>
+<body><div id="site-loader" role="status" aria-label="Loading Tikpan Recruitment Group"><div class="site-loader-mark"><strong>TIKPAN</strong><span>RECRUITMENT GROUP</span><i class="site-loader-line" aria-hidden="true"></i></div></div>
 <header data-site-header data-root="../../"></header>
 <main>
   <section class="hero sector-hero">
@@ -25,8 +37,8 @@
       <h1 class="page-display">Healthcare<br><em>recruitment agency.</em></h1>
       <p>A specialist recruitment agency connecting care and healthcare employers with dependable people.</p>
       <div class="hero-actions">
-        <a class="btn btn-gold" href="mailto:YOUR_EMAIL_HERE?subject=Healthcare%20staffing%20request"><span class="btn-label">Request staff <span aria-hidden="true">↗</span></span></a>
-        <a class="btn btn-outline" href="mailto:YOUR_EMAIL_HERE?subject=Healthcare%20candidate%20enquiry"><span class="btn-label">Find work <span aria-hidden="true">↗</span></span></a>
+        <a class="btn btn-gold" href="mailto:info@tikpanrecruitment.co.uk?subject=Healthcare%20staffing%20request"><span class="btn-label">Request staff <span aria-hidden="true">↗</span></span></a>
+        <a class="btn btn-outline" href="mailto:info@tikpanrecruitment.co.uk?subject=Healthcare%20candidate%20enquiry"><span class="btn-label">Find work <span aria-hidden="true">↗</span></span></a>
       </div>
     </div>
   </section>
@@ -60,9 +72,9 @@
     <div class="container site-shell">
       <div class="sector-cta-copy"><h2>Let’s talk healthcare recruitment.</h2><p>Speak to our friendly team about finding people or exploring your next opportunity.</p></div>
       <div class="sector-contact-options" aria-label="Contact Tikpan Recruitment">
-        <a class="sector-contact-option" href="tel:YOUR_PHONE_HERE"><span class="sector-contact-label">Telephone</span><strong>Phone number to be added</strong></a>
-        <a class="sector-contact-option" href="mailto:YOUR_EMAIL_HERE?subject=Healthcare%20recruitment%20enquiry"><span class="sector-contact-label">Email</span><strong>Email address to be added</strong></a>
-        <a class="sector-contact-option" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener"><span class="sector-contact-label">WhatsApp</span><strong>Message our team <span aria-hidden="true">↗</span></strong></a>
+        <a class="sector-contact-option" href="tel:+447383831601"><span class="sector-contact-label">Telephone</span><strong>Phone number to be added</strong></a>
+        <a class="sector-contact-option" href="mailto:info@tikpanrecruitment.co.uk?subject=Healthcare%20recruitment%20enquiry"><span class="sector-contact-label">Email</span><strong>Email address to be added</strong></a>
+        <a class="sector-contact-option" href="https://wa.me/447383831601" target="_blank" rel="noopener"><span class="sector-contact-label">WhatsApp</span><strong>Message our team <span aria-hidden="true">↗</span></strong></a>
       </div>
     </div>
   </section>
@@ -81,7 +93,7 @@
   </section>
 </main>
 <footer class="footer" data-site-footer data-root="../../"></footer>
-<a class="whatsapp-float" href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" rel="noopener" aria-label="Contact Tikpan on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.03 3.2A12.7 12.7 0 0 0 5.25 22.62L3.4 29.4l6.94-1.82A12.7 12.7 0 1 0 16.03 3.2Zm0 22.97c-1.97 0-3.9-.53-5.57-1.52l-.4-.24-4.12 1.08 1.1-4.01-.26-.41a10.25 10.25 0 1 1 9.25 5.1Zm5.62-7.68c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.16-.2.3-.8 1-.98 1.2-.18.2-.36.23-.67.08-.3-.16-1.3-.48-2.47-1.53a9.27 9.27 0 0 1-1.71-2.13c-.18-.31-.02-.48.13-.63.14-.14.31-.36.46-.54.15-.18.2-.3.31-.51.1-.2.05-.39-.03-.54-.08-.16-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.54.08-.82.39-.28.3-1.08 1.05-1.08 2.57 0 1.51 1.1 2.98 1.26 3.18.15.2 2.17 3.31 5.25 4.64.73.32 1.3.5 1.75.64.74.23 1.4.2 1.93.12.59-.09 1.82-.75 2.08-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36Z"/></svg><span>WhatsApp us</span></a>
+<a class="whatsapp-float" href="https://wa.me/447383831601" target="_blank" rel="noopener" aria-label="Contact Tikpan on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.03 3.2A12.7 12.7 0 0 0 5.25 22.62L3.4 29.4l6.94-1.82A12.7 12.7 0 1 0 16.03 3.2Zm0 22.97c-1.97 0-3.9-.53-5.57-1.52l-.4-.24-4.12 1.08 1.1-4.01-.26-.41a10.25 10.25 0 1 1 9.25 5.1Zm5.62-7.68c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.16-.2.3-.8 1-.98 1.2-.18.2-.36.23-.67.08-.3-.16-1.3-.48-2.47-1.53a9.27 9.27 0 0 1-1.71-2.13c-.18-.31-.02-.48.13-.63.14-.14.31-.36.46-.54.15-.18.2-.3.31-.51.1-.2.05-.39-.03-.54-.08-.16-.69-1.67-.95-2.29-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.54.08-.82.39-.28.3-1.08 1.05-1.08 2.57 0 1.51 1.1 2.98 1.26 3.18.15.2 2.17 3.31 5.25 4.64.73.32 1.3.5 1.75.64.74.23 1.4.2 1.93.12.59-.09 1.82-.75 2.08-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36Z"/></svg><span>WhatsApp us</span></a>
 <script src="../../assets/js/site-footer.js?v=20"></script>
 <script src="../../assets/js/scroll-effects.js?v=22"></script>
 </body>

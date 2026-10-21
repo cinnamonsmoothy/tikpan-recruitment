@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head>
+<head><style id="site-loading-style">
+html.site-loading body{background:#041b34}
+html.site-loading:not(.site-ready) body>:not(#site-loader){visibility:hidden!important}
+#site-loader{display:none;position:fixed;inset:0;z-index:2147483647;align-items:center;justify-content:center;background:#041b34;color:#fff;text-align:center;transition:opacity .35s ease,visibility .35s ease}
+html.site-loading #site-loader{display:flex}
+html.site-ready #site-loader{opacity:0;visibility:hidden;pointer-events:none}
+.site-loader-mark{padding:28px;min-width:220px}
+.site-loader-mark strong{display:block;color:#fff;font:700 clamp(30px,7vw,46px)/1.1 Arial,sans-serif;letter-spacing:.14em}
+.site-loader-mark span{display:block;margin-top:9px;color:#d6b34f;font:700 10px/1.5 Arial,sans-serif;letter-spacing:.26em}
+.site-loader-line{display:block;width:94px;height:2px;margin:25px auto 0;background:#d6b34f;transform-origin:left;animation:site-loader-pulse 1.2s ease-in-out infinite alternate}
+@keyframes site-loader-pulse{from{transform:scaleX(.3);opacity:.55}to{transform:scaleX(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){#site-loader{transition:none}.site-loader-line{animation:none}}
+</style><script>(function(){var h=document.documentElement,finished=false;h.classList.add('site-loading');function ready(){if(finished)return;if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ready,{once:true});return}finished=true;requestAnimationFrame(function(){requestAnimationFrame(function(){document.querySelectorAll('.hero,.about-hero').forEach(function(el){el.classList.add('site-bg-visible','hero-image-visible')});h.classList.add('site-ready');setTimeout(function(){h.classList.remove('site-loading','site-ready')},400)})})}if(document.readyState==='complete')ready();else window.addEventListener('load',ready,{once:true});setTimeout(ready,5000)})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="View this current vacancy from Tikpan Recruitment Group.">
@@ -18,7 +30,7 @@
   <link rel="stylesheet" href="../assets/css/site-header.css?v=21" data-site-header-styles>
   <script src="../assets/js/site-header.js?v=23" defer></script>
 </head>
-<body>
+<body><div id="site-loader" role="status" aria-label="Loading Tikpan Recruitment Group"><div class="site-loader-mark"><strong>TIKPAN</strong><span>RECRUITMENT GROUP</span><i class="site-loader-line" aria-hidden="true"></i></div></div>
   <header data-site-header data-root="../"></header>
   <main id="job-detail" aria-live="polite" aria-busy="true">
     <section class="page-hero job-detail-hero">

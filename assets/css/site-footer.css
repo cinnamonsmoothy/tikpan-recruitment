@@ -27,6 +27,8 @@
   border-top: 1px solid rgba(255, 255, 255, .11);
   font-size: 11px;
 }
+.copyright a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.copyright a:hover { color: #d6b34f; }
 
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }

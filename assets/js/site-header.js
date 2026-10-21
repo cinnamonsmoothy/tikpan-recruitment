@@ -30,7 +30,7 @@ document.querySelectorAll('[data-site-header]').forEach(function (host) {
           <div class="nav-dropdown">
             <a href="${root}index.html#contact" class="dropdown-trigger">Candidates <span class="nav-chevron" aria-hidden="true"><svg viewBox="0 0 12 8"><path d="m1 1 5 5 5-5"/></svg></span></a>
             <div class="dropdown-menu candidate-menu">
-              <a href="mailto:YOUR_EMAIL_HERE?subject=Candidate%20CV%20submission" class="dropdown-overview">Email Your CV ↗</a>
+              <a href="mailto:info@tikpanrecruitment.co.uk?subject=Candidate%20CV%20submission" class="dropdown-overview">Email Your CV ↗</a>
               <a href="${root}vacancies/index.html">View Vacancies</a>
             </div>
           </div>

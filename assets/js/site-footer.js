@@ -42,9 +42,12 @@ document.querySelectorAll('[data-site-footer]').forEach(function (footer) {
           <a href="${root}index.html#contact">Request Staff</a>
           <a href="${root}index.html#contact">Contact Us</a>
           <a href="${root}privacy/index.html">Candidate Privacy Notice</a>
+          <a href="mailto:info@tikpanrecruitment.co.uk">info@tikpanrecruitment.co.uk</a>
+          <a href="tel:+447383831601">+44 7383 831601</a>
+          <a href="https://wa.me/447383831601">WhatsApp: +44 7383 831601</a>
         </div>
       </div>
-      <div class="copyright">© <span id="year" data-footer-year></span> Tikpan Recruitment Group Ltd. All rights reserved.</div>
+      <div class="copyright">© <span id="year" data-footer-year></span> Tikpan Recruitment Group Ltd. All rights reserved. Website designed by <a href="https://findcandidates.co.uk" target="_blank" rel="noopener noreferrer">FindCandidates.co.uk</a>.</div>
     </div>`;
 
   footer.querySelector('[data-footer-year]').textContent = new Date().getFullYear();
