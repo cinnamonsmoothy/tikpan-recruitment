@@ -18,7 +18,7 @@
   display: block;
   width: 220px;
   height: 60px;
-  background: url('../../tikpan-logo.PNG') 0 -81px / 220px 220px no-repeat;
+  background: url('../../tikpan-logo.PNG') -14px -81px / 220px 220px no-repeat;
   filter: brightness(0) invert(1);
 }
 .copyright {
@@ -38,7 +38,7 @@
 
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-brand { width: 180px; height: 50px; background-position: 0 -66px; background-size: 180px; }
+  .footer-brand { width: 180px; height: 50px; background-position: -12px -66px; background-size: 180px; }
   .copyright { margin-top: 32px; }
 }
 
