@@ -35,6 +35,24 @@ main {
   letter-spacing: -3px !important;
 }
 
+/* Match the home headline to the viewport without enlarging it on laptops. */
+.home-page .hero .page-display {
+  font-size: clamp(52px, min(3.7vw, 9svh), 128px) !important;
+}
+
+.home-page .hero-inner {
+  padding-top: max(116px, 8svh);
+  padding-bottom: max(116px, 8svh);
+}
+
+/* The header overlays the hero; give laptop layouts an explicit clear area. */
+@media (min-width: 601px) and (max-width: 2200px) {
+  .home-page .hero-inner {
+    padding-top: max(150px, 12svh);
+    padding-bottom: max(72px, 6svh);
+  }
+}
+
 .page-hero h1 {
   width: 100%;
   max-width: 1150px !important;
@@ -88,5 +106,14 @@ main {
   .page-display {
     font-size: clamp(53px, 15vw, 72px) !important;
     letter-spacing: -2px !important;
+  }
+
+  .home-page .hero .page-display {
+    font-size: clamp(44px, 14vw, 72px) !important;
+  }
+
+  .home-page .hero-inner {
+    padding-top: max(104px, 12svh);
+    padding-bottom: 40px;
   }
 }
