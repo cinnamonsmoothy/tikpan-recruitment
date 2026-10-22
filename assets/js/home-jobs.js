@@ -27,10 +27,10 @@
       return '<article class="job-card"><div><span class="job-card-sector">' + escapeHtml(job.sector || 'Vacancy') + '</span>' +
         '<h3>' + escapeHtml(job.title || 'Current vacancy') + '</h3>' +
         '<div class="job-meta">' + metadata + '</div></div>' +
-        '<span class="job-card-action">View role <span aria-hidden="true">→</span></span>' +
+        '<span class="job-card-action">View role</span>' +
         '<a class="job-card-link" href="' + href + '" aria-label="View ' + escapeHtml(job.title || 'current vacancy') + '"></a></article>';
     }).join('');
-    note.innerHTML = '<a href="vacancies/index.html">View all vacancies ↗</a>';
+    note.innerHTML = '<a href="vacancies/index.html">View all vacancies</a>';
     section.hidden = false;
   }).catch(function () {
     section.hidden = true;

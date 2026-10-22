@@ -116,7 +116,7 @@
         '<div><span class="job-card-sector">' + escapeHtml(job.sector) + '</span>' +
         '<h3>' + escapeHtml(job.title) + '</h3>' +
         '<div class="job-meta">' + metadata + '</div></div>' +
-        '<span class="job-card-action">View role <span aria-hidden="true">→</span></span>' +
+        '<span class="job-card-action">View role</span>' +
         '<a class="job-card-link" href="' + encodeURI(job.detailUrl) + '" aria-label="View ' + escapeHtml(job.title) + '"></a>' +
         '</article>';
     }).join('');
