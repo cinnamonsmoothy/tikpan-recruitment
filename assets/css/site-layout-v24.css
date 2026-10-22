@@ -35,24 +35,6 @@ main {
   letter-spacing: -3px !important;
 }
 
-/* Match the home headline to the viewport without enlarging it on laptops. */
-.home-page .hero .page-display {
-  font-size: clamp(52px, min(3.7vw, 9svh), 128px) !important;
-}
-
-.home-page .hero-inner {
-  padding-top: max(116px, 8svh);
-  padding-bottom: max(116px, 8svh);
-}
-
-/* The header overlays the hero; give laptop layouts an explicit clear area. */
-@media (min-width: 601px) and (max-width: 2200px) {
-  .home-page .hero-inner {
-    padding-top: max(150px, 12svh);
-    padding-bottom: max(72px, 6svh);
-  }
-}
-
 .page-hero h1 {
   width: 100%;
   max-width: 1150px !important;
@@ -108,12 +90,137 @@ main {
     letter-spacing: -2px !important;
   }
 
-  .home-page .hero .page-display {
-    font-size: clamp(44px, 14vw, 72px) !important;
+}
+
+/* One final hero system for the home page and every sector page. */
+.home-page #home {
+  --shared-hero-image: url('../images/site/1522071820081-009f0129c71c.webp');
+}
+
+.sector-page .sector-hero {
+  --shared-hero-image: var(--sector-hero-image, url('../images/site/1785788682899-101daed965b6.webp'));
+}
+
+:is(.home-page #home, .sector-page .sector-hero) {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: row;
+}
+
+:is(.home-page #home, .sector-page .sector-hero)::before {
+  background-image:
+    linear-gradient(90deg, rgba(4,27,52,.97) 0%, rgba(4,27,52,.84) 48%, rgba(4,27,52,.28) 100%),
+    var(--shared-hero-image);
+  background-position: var(--sector-hero-position, center);
+  background-size: cover;
+}
+
+:is(.home-page #home, .sector-page .sector-hero)::after {
+  border-color: rgba(255,255,255,.07);
+  box-shadow: 0 0 0 100px rgba(255,255,255,.02), 0 0 0 200px rgba(255,255,255,.015);
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .hero-inner {
+  flex: 0 1 auto;
+  min-height: 100svh;
+  max-width: none;
+  padding: 125px 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) h1.page-display {
+  max-width: 1150px !important;
+  margin: 0 0 28px;
+  color: #fff;
+  font-size: clamp(62px, 7vw, 104px) !important;
+  font-weight: 600 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -3px !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) p {
+  max-width: 690px;
+  margin: 0 0 35px;
+  color: #cbd8e5;
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn {
+  min-height: 56px;
+  padding: 0 29px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn::before {
+  display: none !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn-gold,
+:is(.home-page #home, .sector-page .sector-hero) .btn-gold:hover {
+  border: 0 !important;
+  color: #041b34 !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn-gold {
+  background: #d6b34f !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn-gold:hover {
+  background: #fff !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn-outline {
+  border: 1px solid #fff !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+:is(.home-page #home, .sector-page .sector-hero) .btn-outline:hover {
+  background: #fff !important;
+  color: #041b34 !important;
+}
+
+@media (max-width: 650px) {
+  :is(.home-page #home, .sector-page .sector-hero) h1.page-display {
+    font-size: clamp(44px, 13.5vw, 66px) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  :is(.home-page #home, .sector-page .sector-hero) .hero-inner {
+    padding: 105px 0 70px;
   }
 
-  .home-page .hero-inner {
-    padding-top: max(104px, 12svh);
-    padding-bottom: 40px;
+  :is(.home-page #home, .sector-page .sector-hero) h1.page-display {
+    letter-spacing: -2px !important;
+  }
+
+  :is(.home-page #home, .sector-page .sector-hero) p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  :is(.home-page #home, .sector-page .sector-hero) .btn {
+    min-height: 54px;
+    padding: 0 25px;
   }
 }
