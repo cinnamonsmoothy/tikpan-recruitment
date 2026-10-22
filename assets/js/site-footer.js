@@ -13,7 +13,7 @@ document.querySelectorAll('[data-site-footer]').forEach(function (footer) {
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="footer-brand" href="${root}index.html" aria-label="Tikpan home"></a>
+          <a class="footer-brand" href="${root}" aria-label="Tikpan home"></a>
           <p>Connecting employers and candidates across specialist industries through an honest, people-first approach.</p>
           <div class="footer-company">
             <strong>TIKPAN RECRUITMENT GROUP LTD</strong>
@@ -23,25 +23,25 @@ document.querySelectorAll('[data-site-footer]').forEach(function (footer) {
         </div>
         <div>
           <h4>Sectors</h4>
-          <a href="${root}sectors/marine-offshore-fishing/index.html">Marine, Offshore &amp; Fishing</a>
-          <a href="${root}sectors/engineering-construction/index.html">Engineering &amp; Construction</a>
-          <a href="${root}sectors/logistics-warehousing/index.html">Logistics &amp; Warehousing</a>
-          <a href="${root}sectors/healthcare/index.html">Healthcare</a>
-          <a href="${root}sectors/hospitality/index.html">Hospitality</a>
-          <a href="${root}sectors/professional-administration/index.html">Professional &amp; Administration</a>
+          <a href="${root}sectors/marine-offshore-fishing/">Marine, Offshore &amp; Fishing</a>
+          <a href="${root}sectors/engineering-construction/">Engineering &amp; Construction</a>
+          <a href="${root}sectors/logistics-warehousing/">Logistics &amp; Warehousing</a>
+          <a href="${root}sectors/healthcare/">Healthcare</a>
+          <a href="${root}sectors/hospitality/">Hospitality</a>
+          <a href="${root}sectors/professional-administration/">Professional &amp; Administration</a>
         </div>
         <div>
           <h4>Explore</h4>
-          <a href="${root}about/index.html">About Us</a>
-          <a href="${root}vacancies/index.html">Vacancies</a>
-          <a href="${root}index.html#employers">Employers</a>
-          <a href="${root}index.html#candidates">Candidates</a>
+          <a href="${root}about/">About Us</a>
+          <a href="${root}vacancies/">Vacancies</a>
+          <a href="${root}#employers">Employers</a>
+          <a href="${root}#candidates">Candidates</a>
         </div>
         <div>
           <h4>Useful links</h4>
-          <a href="${root}index.html#contact">Request Staff</a>
-          <a href="${root}index.html#contact">Contact Us</a>
-          <a href="${root}privacy/index.html">Candidate Privacy Notice</a>
+          <a href="${root}#contact">Request Staff</a>
+          <a href="${root}#contact">Contact Us</a>
+          <a href="${root}privacy/">Candidate Privacy Notice</a>
           <a href="mailto:info@tikpanrecruitment.co.uk">info@tikpanrecruitment.co.uk</a>
           <a href="tel:+447383831601">+44 7383 831601</a>
           <a href="https://wa.me/447383831601">WhatsApp: +44 7383 831601</a>

@@ -30,7 +30,7 @@
         '<span class="job-card-action">View role</span>' +
         '<a class="job-card-link" href="' + href + '" aria-label="View ' + escapeHtml(job.title || 'current vacancy') + '"></a></article>';
     }).join('');
-    note.innerHTML = '<a href="vacancies/index.html">View all vacancies</a>';
+    note.innerHTML = '<a href="vacancies/">View all vacancies</a>';
     section.hidden = false;
   }).catch(function () {
     section.hidden = true;
