@@ -111,13 +111,13 @@
 .team-section { padding: 120px 0; background: #fff; }
 .team-heading { margin-bottom: 52px; text-align: center; }
 .team-heading h2 { margin-bottom: 0; }
-.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .team-card { overflow: hidden; border: 0; border-radius: 0; background: #f5f8fb; box-shadow: 0 14px 36px rgba(4,27,52,.18); }
-.team-photo { position: relative; aspect-ratio: 4 / 4.6; overflow: hidden; background: #dce5ed; }
+.team-photo { position: relative; aspect-ratio: 4 / 5.2; overflow: hidden; background: #dce5ed; }
 .team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 28%; background: linear-gradient(transparent, rgba(4,27,52,.18)); pointer-events: none; }
 .team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .65s cubic-bezier(.2,.7,.2,1); }
 .team-card:first-child .team-photo img { object-position: center 20%; }
-.team-details { padding: 28px 30px 31px; border-top: 4px solid #d6b34f; }
+.team-details { padding: 32px 30px 36px; border-top: 4px solid #d6b34f; }
 .team-details h3 { margin: 0 0 8px; color: #06264b; font-size: clamp(24px, 2.7vw, 34px); font-weight: 600; letter-spacing: -.8px; }
 .team-details p { margin: 0; color: #627184; font-size: 14px; font-weight: 700; letter-spacing: .3px; }
 
@@ -200,8 +200,8 @@
   .mission-card p { font-size: 15px; }
   .team-heading { margin-bottom: 34px; }
   .team-grid { grid-template-columns: 1fr; gap: 30px; }
-  .team-photo { aspect-ratio: 4 / 4.5; }
-  .team-details { padding: 23px 22px 26px; }
+  .team-photo { aspect-ratio: 4 / 5; }
+  .team-details { padding: 26px 22px 30px; }
   .principles-list article { grid-template-columns: 58px 1fr; gap: 18px; padding: 24px 20px; border-radius: 14px; }
   .principle-icon { width: 58px; height: 58px; border-radius: 13px; }
   .principle-icon svg { width: 27px; height: 27px; }
