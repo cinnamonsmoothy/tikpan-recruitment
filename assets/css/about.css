@@ -109,11 +109,11 @@
 .mission-card p { max-width: 900px; margin: 0 auto; color: #cbd8e5; font-size: 17px; }
 
 .team-section { padding: 120px 0; background: #fff; }
+.team-section .container { width: min(1788px, calc(100% - 48px)) !important; }
 .team-heading { margin-bottom: 52px; text-align: center; }
 .team-heading h2 { margin-bottom: 0; }
-.team-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
 .team-card { overflow: hidden; border: 0; border-radius: 0; background: #f5f8fb; box-shadow: 0 14px 36px rgba(4,27,52,.18); }
-.team-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc((100% - 36px) / 2); justify-self: center; }
 .team-photo { position: relative; aspect-ratio: 4 / 4.6; overflow: hidden; background: #dce5ed; }
 .team-photo::after { content: ""; position: absolute; inset: auto 0 0; height: 28%; background: linear-gradient(transparent, rgba(4,27,52,.18)); pointer-events: none; }
 .team-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .65s cubic-bezier(.2,.7,.2,1); }
@@ -182,6 +182,8 @@
 @media (max-width: 900px) {
   .about-intro-grid { grid-template-columns: 1fr; gap: 75px; }
   .about-photo { min-height: 500px; }
+  .team-section .container { width: calc(100% - 34px) !important; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-cta .container { align-items: flex-start; flex-direction: column; }
 }
 
@@ -200,7 +202,6 @@
   .mission-card p { font-size: 15px; }
   .team-heading { margin-bottom: 34px; }
   .team-grid { grid-template-columns: 1fr; gap: 30px; }
-  .team-card:last-child:nth-child(odd) { grid-column: auto; width: 100%; }
   .team-photo { aspect-ratio: 4 / 4.5; }
   .team-details { padding: 23px 22px 26px; }
   .principles-list article { grid-template-columns: 58px 1fr; gap: 18px; padding: 24px 20px; border-radius: 14px; }
