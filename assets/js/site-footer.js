@@ -27,6 +27,7 @@ document.querySelectorAll('[data-site-footer]').forEach(function (footer) {
           <a href="${root}sectors/engineering-construction/">Engineering &amp; Construction</a>
           <a href="${root}sectors/logistics-warehousing/">Logistics &amp; Warehousing</a>
           <a href="${root}sectors/healthcare/">Healthcare</a>
+          <a href="${root}sectors/nannies-childcare/">Nannies &amp; Childcare Professionals</a>
           <a href="${root}sectors/hospitality/">Hospitality</a>
           <a href="${root}sectors/professional-administration/">Professional &amp; Administration</a>
         </div>

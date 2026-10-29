@@ -234,6 +234,42 @@
   background: #d6b34f;
 }
 
+.sector-candidates {
+  padding: 56px 0;
+  background: #fff;
+}
+.sector-candidates-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 30px 36px;
+  border: 1px solid #dce4eb;
+  border-left: 4px solid #d6b34f;
+  border-radius: 12px;
+  background: #f5f8fb;
+}
+.sector-candidates h2 {
+  margin: 0 0 8px;
+  color: #06264b;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+}
+.sector-candidates p { max-width: 700px; margin: 0; color: #627184; }
+.sector-candidates .btn { flex: 0 0 auto; }
+.childcare-sector-page .sector-hero.hero::before {
+  background-image:
+    linear-gradient(90deg, rgba(4,27,52,.96), rgba(4,27,52,.76) 48%, rgba(4,27,52,.24)),
+    url('../images/site/nannies-childcare.webp');
+}
+.childcare-sector-page .sector-photo {
+  background: url('../images/site/nannies-childcare.webp') center / cover;
+}
+.childcare-sector-page .sector-job::before,
+.childcare-sector-page .sector-job::after { display: none; }
+.childcare-sector-page .sector-job { aspect-ratio: auto; min-height: 150px; }
+.childcare-sector-page .sector-job h3 { min-height: 150px; justify-content: center; text-align: center; font-size: 19px; }
+
 .sector-cta::after {
   content: "";
   position: absolute;
@@ -314,6 +350,8 @@
 }
 
 @media (max-width: 650px) {
+  .sector-candidates-inner { display: block; padding: 26px; }
+  .sector-candidates .btn { margin-top: 20px; }
   .sector-hero h1 { font-size: clamp(48px, 13.5vw, 66px) !important; }
   .sector-intro,
   .sector-jobs { padding: 80px 0; }
