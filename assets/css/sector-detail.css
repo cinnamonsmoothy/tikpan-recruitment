@@ -257,10 +257,8 @@
 }
 .sector-candidates p { max-width: 700px; margin: 0; color: #627184; }
 .sector-candidates .btn { flex: 0 0 auto; }
-.childcare-sector-page .sector-hero.hero::before {
-  background-image:
-    linear-gradient(90deg, rgba(4,27,52,.96), rgba(4,27,52,.76) 48%, rgba(4,27,52,.24)),
-    url('../images/site/nannies-childcare.webp');
+.childcare-sector-page {
+  --sector-hero-image: url('../images/site/nannies-childcare.webp');
 }
 .childcare-sector-page .sector-photo {
   background: url('../images/site/nannies-childcare.webp') center / cover;
