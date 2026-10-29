@@ -259,14 +259,13 @@
 .sector-candidates .btn { flex: 0 0 auto; }
 .childcare-sector-page {
   --sector-hero-image: url('../images/site/nannies-childcare.webp');
+  --sector-intro-image: url('../images/site/childcare-stock/childcare-intro.webp');
+  --sector-job-1: url('../images/site/childcare-stock/childcare-role-nannies.webp');
+  --sector-job-2: url('../images/site/childcare-stock/childcare-role-live-in.webp');
+  --sector-job-3: url('../images/site/childcare-stock/childcare-role-live-out.webp');
+  --sector-job-4: url('../images/site/childcare-stock/childcare-role-maternity.webp');
+  --sector-job-5: url('../images/site/childcare-stock/childcare-role-babysitters.webp');
 }
-.childcare-sector-page .sector-photo {
-  background: url('../images/site/nannies-childcare.webp') center / cover;
-}
-.childcare-sector-page .sector-job::before,
-.childcare-sector-page .sector-job::after { display: none; }
-.childcare-sector-page .sector-job { aspect-ratio: auto; min-height: 150px; }
-.childcare-sector-page .sector-job h3 { min-height: 150px; justify-content: center; text-align: center; font-size: 19px; }
 
 .sector-cta::after {
   content: "";

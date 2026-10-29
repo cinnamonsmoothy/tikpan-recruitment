@@ -152,6 +152,7 @@ a { color: inherit; text-decoration: none; }
 .sector:nth-child(4) { background-image: url('../images/site/1576091160399-112ba8d25d1d.webp'); }
 .sector:nth-child(5) { background-image: url('../images/site/1566073771259-6a8506099945.webp'); }
 .sector:nth-child(6) { background-image: url('../images/site/1497366811353-6870744d04b2.webp'); }
+.sector:nth-child(7) { background-image: url('../images/site/childcare-stock/childcare-sector-thumb.webp'); }
 
 .whatsapp-float {
   position: fixed;
